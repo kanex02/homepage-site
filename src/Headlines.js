@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import './assets/css/Headlines.css'
+import './assets/css/Headlines.css';
 
 
 class Headlines extends Component {
     getHeadlines() {
         $.ajax ({
             type: "GET",
-            url: "http://localhost:8080/headlines",
+            url: process.env.REACT_APP_PATH_TO_API + "headlines",
             success: function(data) {
                 for (var i = 0; i < data.articles.length; i++) {
                     $( "#headlines" ).append(

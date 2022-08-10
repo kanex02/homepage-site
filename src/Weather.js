@@ -37,7 +37,7 @@ class Weather extends Component {
             lon = position.coords.longitude;
             $.ajax({
                 type: "GET", 
-                url: "http://localhost:8080/getweather/", 
+                url: process.env.REACT_APP_PATH_TO_API + "getweather",
                 data: { lat:lat, lon:lon }, 
                 success: function(data){
                     document.getElementById("temp").innerHTML = data.temp;

@@ -1,0 +1,117 @@
+.weather-time {
+    height: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+#weatherbox {
+    background-color: #62C370;
+    color: white;
+    font-size: 130%;
+    cursor: pointer;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d; 
+}
+
+#weatherbox h2 {
+    color: white;
+}
+
+#weather-on {
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#clickit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: none;
+    margin-right: 2rem;
+}
+
+div.hoverit #weatherh:hover + #clickit, #clickit:hover, div.hoverit #spin:hover + #clickit {
+    display: block;
+}
+
+#spin {
+    position: absolute;
+    top: 0;
+    right: -2rem;
+    z-index: 1;
+    margin-right: 0.5rem;
+    display: block;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+div.hoverit:hover > #spin {
+    display: block;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+/* From cssbuttons.io by @nikk7007 */
+#weatherbox button {
+    padding: 0.8em 1.8em;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    height: 100%;
+    width: 100%;
+}
+   
+#weatherbox button::before {
+    content: '';
+    width: 0;
+    height: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+#weatherbox button:hover::before {
+    width: 105%;
+}
+
+#weatherbox button:hover {
+    color: #333;
+}
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

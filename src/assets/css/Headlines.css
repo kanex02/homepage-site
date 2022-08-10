@@ -1,0 +1,23 @@
+#headlinebox {
+    max-height: 320px;
+    overflow-y: scroll;
+    direction: rtl;
+    background-color: #E94957;
+}
+
+#headlinebox p {
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    background-color: rgba(50, 50, 50, 0.2);
+    font-size: larger;
+}
+
+#headlinebox a {
+    text-decoration: none;
+    color: white;
+}
+
+#headlines {
+    padding: 0.5rem;
+}
